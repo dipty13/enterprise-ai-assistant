@@ -18,3 +18,22 @@ Implemented:
 GET /health
 GET /api/documents
 POST /api/documents
+````
+
+## Day 2
+
+Implemented PostgreSQL persistence using Spring Data JPA.
+
+### Added
+
+- Docker Compose PostgreSQL setup
+- `Document` JPA entity
+- `DocumentRepository`
+- Database-backed `GET /api/documents`
+- Database-backed `POST /api/documents`
+
+### How to run PostgreSQL
+
+```bash
+docker compose up -d
+```
