@@ -1,5 +1,15 @@
 spring:
   application:
     name: enterprise-ai-assistant
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/enterprise_ai
+    username: enterprise
+    password: enterprise_password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 server:
   port: 8080

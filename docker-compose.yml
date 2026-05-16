@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: enterprise-ai-postgres
+    environment:
+      POSTGRES_DB: enterprise_ai
+      POSTGRES_USER: enterprise
+      POSTGRES_PASSWORD: enterprise_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - enterprise_ai_pgdata:/var/lib/postgresql/data
+
+volumes:
+  enterprise_ai_pgdata:
