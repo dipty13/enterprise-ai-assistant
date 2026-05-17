@@ -37,3 +37,25 @@ Implemented PostgreSQL persistence using Spring Data JPA.
 ```bash
 docker compose up -d
 ```
+## Day 3
+
+Refactored the document API to use a service layer and DTOs.
+
+### Added
+
+- `DocumentService`
+- `CreateDocumentRequest`
+- `DocumentResponse`
+- `ErrorResponse`
+- `GlobalExceptionHandler`
+- Cleaner validation messages
+
+### Request flow
+
+```text
+HTTP request
+→ DocumentController
+→ DocumentService
+→ DocumentRepository
+→ PostgreSQL
+```
